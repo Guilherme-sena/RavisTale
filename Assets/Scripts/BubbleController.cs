@@ -32,7 +32,7 @@ public class BubbleController : MonoBehaviour
                 child.DetachChildren();
 
             }
-            if(child.position.y > 15 && child.transform != null ){
+            if(child.position.y > 30 && child.transform != null ){
                 Destroy(child.gameObject);
             }
        }
@@ -44,7 +44,7 @@ public class BubbleController : MonoBehaviour
     {
         if(obj.transform != null){
 
-            StartCoroutine(MoveToCoroutine(obj, new Vector2(obj.position.x,25), 15));
+            StartCoroutine(MoveToCoroutine(obj, new Vector2(obj.position.x,obj.position.y +30.0f), 15));
         }
         //obj.Translate(0f ,_bubbleSpeed*Time.deltaTime,0f);
     }
