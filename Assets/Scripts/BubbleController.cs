@@ -1,17 +1,13 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Animations;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor.PackageManager;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class BubbleController : MonoBehaviour
 {
-
+    public AudioClip successSFX;
+    public int partCount = 0;
     private Transform lastbubble;
+    private trocarDeCena trocarDeCena;
     public GameObject bubble_pop;
     public AudioClip bubblePopEffect;
     public Transform gun_position;
@@ -22,17 +18,29 @@ public class BubbleController : MonoBehaviour
 
     void Start(){
         audioSource = GetComponent<AudioSource>();
-
+        trocarDeCena = FindObjectOfType<trocarDeCena>();
 
     }
     void Update(){
+       if(partCount == 3){
+        trocarDeCena.SampleScene = 1;
+       }
        foreach (Transform child in transform){
             if(child.gameObject.GetComponent<SpriteRenderer>().enabled == false){
                 child.localScale = new Vector3(1,1,1); 
                 child.DetachChildren();
 
             }
-            if(child.position.y > 30 && child.transform != null ){
+            if(child.position.y > 43 && child.transform != null ){
+                 foreach (Transform child2 in child){
+                    if(child2.tag == "SubPart"){
+                        audioSource.clip = successSFX;
+                        audioSource.Play();
+                        partCount ++;
+
+                    }
+                 }
+
                 Destroy(child.gameObject);
             }
        }
@@ -43,7 +51,6 @@ public class BubbleController : MonoBehaviour
     public void ApplyMovement(Transform obj)
     {
         if(obj.transform != null){
-
             StartCoroutine(MoveToCoroutine(obj, new Vector2(obj.position.x,obj.position.y +30.0f), 15));
         }
         //obj.Translate(0f ,_bubbleSpeed*Time.deltaTime,0f);

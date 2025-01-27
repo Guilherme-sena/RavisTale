@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1934787235712288567}
   - component: {fileID: 6197982917820475004}
-  - component: {fileID: 5466137410622703536}
   - component: {fileID: 6209964760707278259}
+  - component: {fileID: 6373159763013543193}
   m_Layer: 0
   m_Name: ChangeMusicCave
   m_TagString: Untagged
@@ -86,21 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5466137410622703536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9081654650834269473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f17ed81b0d8b04d8faaa9953ac8a4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newMusic: {fileID: 8300000, guid: fa4a3fd12c41f474abe24bbeb3e359fe, type: 3}
-  MinPos: {x: -68.3, y: 0.85}
-  MaxPos: {x: -68.3, y: 11.54}
 --- !u!61 &6209964760707278259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6373159763013543193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081654650834269473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69df1b6a4e74d9e4bb06838b17585a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

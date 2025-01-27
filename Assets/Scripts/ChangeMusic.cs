@@ -8,8 +8,6 @@ public class ChangeMusic : MonoBehaviour
 {
     public AudioClip newMusic;
     private AudioController AC;
-    public Vector2 MinPos;
-    public Vector2 MaxPos;
     void Start()
     {
         AC = FindObjectOfType<AudioController>();

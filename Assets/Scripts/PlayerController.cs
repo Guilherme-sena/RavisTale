@@ -12,6 +12,10 @@ using System.IO;
 public class PlayerController : MonoBehaviour
 {
 
+    [SerializeField] private DialogueUI dialogueUI;
+    public DialogueUI DialogueUI => dialogueUI;
+    public Interectable Interectable {get; set;}
+
     public Animator animator;
     private String FireButton = "Fire1";
     private bool _moving;
@@ -33,8 +37,21 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+        if(dialogueUI.IsOpen){
+            _canMove = false;
+            _input = Vector2.zero;
+        }
         if(_canMove == true){
             GetInput();
+        
+        if(Input.GetKey(KeyCode.E))
+        {
+            if(Interectable != null)
+            {
+                Interectable.Interact(this);
+            }
+        }
+        
         }
         Animate();
         if(Input.GetButton(FireButton)){

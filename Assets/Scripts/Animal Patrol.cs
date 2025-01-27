@@ -1,13 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Callbacks;
-using UnityEditor.IMGUI.Controls;
 using UnityEngine;
-using UnityEngine.Timeline;
-using UnityEngine.UIElements;
-
 public class AnimalPatrol : MonoBehaviour
 {
     public GameObject patrolPointsGO;
@@ -18,6 +12,7 @@ public class AnimalPatrol : MonoBehaviour
     public int targetPoint;
     void Start()
     {
+        
         targetPoint = 0;
           BB = FindObjectOfType<BubbleController>();
          foreach (Transform child in patrolPointsGO.transform)
@@ -26,12 +21,13 @@ public class AnimalPatrol : MonoBehaviour
         }
     }
 
-
     void Update()
     {
+
         if(transform.position == points[targetPoint].position){
             increaseTargetInt();
         }
+        FindDirection(transform.transform,points[targetPoint].transform);
         transform.position = Vector3.MoveTowards(transform.position,points[targetPoint].position,_speed * Time.deltaTime);
     }
     private void increaseTargetInt(){
@@ -45,6 +41,16 @@ public class AnimalPatrol : MonoBehaviour
         if(other.transform.tag =="Bubble"){
             BB.POP(other.transform);
         }
+    }
+    private void FindDirection(Transform mob, Transform next_point){
+       //if mob is goint to move right 
+        if(mob.position.x - next_point.position.x < 0){
+            mob.localScale = new Vector2(1,1);
+        }
+        else{
+            mob.localScale = new Vector2(-1,1);
+        }
+
     }
 
 }

@@ -6,19 +6,20 @@ using UnityEngine.Video;
 
 public class trocarDeCena : MonoBehaviour
 {
-    public string SampleScene; // Nome da cena que você quer carregar
+    public int SampleScene; // Nome da cena que vocï¿½ quer carregar
     private VideoPlayer videoPlayer;
 
     void Start()
     {
         videoPlayer = GetComponent<VideoPlayer>();
 
-        // Adiciona o evento quando o vídeo termina
+        // Adiciona o evento quando o vï¿½deo termina
         videoPlayer.loopPointReached += OnVideoEnd;
     }
 
     void OnVideoEnd(VideoPlayer vp)
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SampleScene);
     }
+
 }

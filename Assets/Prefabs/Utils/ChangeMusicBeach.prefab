@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5492590830612952969}
   - component: {fileID: 2770043407670480482}
-  - component: {fileID: 1078610433040317649}
   - component: {fileID: 5721150782575797315}
+  - component: {fileID: -6938670981987648852}
   m_Layer: 0
   m_Name: ChangeMusicBeach
   m_TagString: Untagged
@@ -86,21 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1078610433040317649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9139603823745424405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f17ed81b0d8b04d8faaa9953ac8a4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newMusic: {fileID: 8300000, guid: 3d05acf81bfc6f74aa2b4730b6d3464f, type: 3}
-  MinPos: {x: -42.62, y: 3.2}
-  MaxPos: {x: 28.6, y: 12.8}
 --- !u!61 &5721150782575797315
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-6938670981987648852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9139603823745424405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69df1b6a4e74d9e4bb06838b17585a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
