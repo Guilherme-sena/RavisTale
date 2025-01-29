@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Data.Common;
 
 public class TypingEffect : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class TypingEffect : MonoBehaviour
         int charIndex = 0;
 
         while(charIndex < textToType.Length)
-        {
+        {   
             t += Time.deltaTime * typeWriterSpeed;
             charIndex = Mathf.FloorToInt(t);
             charIndex = Mathf.Clamp(charIndex, 0, textToType.Length);

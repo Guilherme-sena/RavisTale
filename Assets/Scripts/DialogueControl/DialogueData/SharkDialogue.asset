@@ -12,4 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 672fd4010544e9b478cf51b19dda3b90, type: 3}
   m_Name: SharkDialogue
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - "Levi:\n Meu grande Poseidon Era s\xF3 o que me faltava\u2026um tubar\xE3o!\n"
+  - "Tutu:\nQuem est\xE1 a\xED? (Olha zangado) oque?! Um humano! "
+  - "Levi:\nVoc\xEA fala?! Isso \xE9 novo\u2026 espero que n\xE3o seja r\xE1pido
+    o suficiente para me pegar com essas perninhas.\n"
+  - "Tutu: \nOlha quem fala! Humano pequeno insignificante eu o grande Tutu! Capit\xE3o
+    e chefe da maior tripula\xE7\xE3o dos 7 mares e\u2026\n"
+  - "Tutu:\nE oque voc\xEA est\xE1 fazendo aqui afinal?"
+  - "Ravi:\nEstou atr\xE1s das pe\xE7\xE3s do meu submarino que quebrou"
+  - "Tutu:\nAh, aquilo foi voc\xEA? Se n\xE3o me engano vi uma das pe\xE7as atr\xE1s
+    do castelo de areia"
+  - "Ravi:\nS\xE9rio? Vou procurar ent\xE3o, mas onde fica isso?"
+  - "Tutu:\nAo norte do coral de rec\xEDfes, no territ\xF3rio dos peixes-palha\xE7o"
+  - "Ravi:\nOk, estou indo ent\xE3o.Obrigado."

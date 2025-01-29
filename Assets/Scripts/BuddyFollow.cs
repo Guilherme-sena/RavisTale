@@ -15,7 +15,7 @@ public float speed = 1f;
 
    }
    void LateUpdate(){
-      if(Distance(transform.position,player.position) <8){
+      if(Distance(transform.position,player.position) < 4){
 
           //if moving right
         if(transform.position.x - player.position.x > 0 && Distance(transform.position,player.position) > 1 ){

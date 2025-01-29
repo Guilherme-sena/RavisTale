@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BubbleController : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class BubbleController : MonoBehaviour
     }
     void Update(){
        if(partCount == 3){
-        trocarDeCena.SampleScene = 1;
+        SceneManager.LoadScene(2);
        }
        foreach (Transform child in transform){
             if(child.gameObject.GetComponent<SpriteRenderer>().enabled == false){
@@ -104,4 +105,3 @@ public void POP(Transform bubble){
     Instantiate(bubble_pop,bubble.transform.position,bubble.transform.rotation);
 }
 }
-    

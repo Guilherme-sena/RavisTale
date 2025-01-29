@@ -13,4 +13,24 @@ MonoBehaviour:
   m_Name: MermaidDialogue
   m_EditorClassIdentifier: 
   dialogue:
-  - 
+  - "Ravi: Quem \xE9 voc\xEA?\n"
+  - "Azura: Eu sou Azura, a sereia dos 7 mares. E voc\xEA \xE9 o humano que est\xE1
+    poluindo nosso lar."
+  - 'Ravi: Poluindo? Eu nunca faria esse tipo de coisa.
+
+'
+  - "Azura: Eu sei de tudo o que acontece nos mares. E eu n\xE3o gosto de humanos.
+    Voc\xEAs s\xE3o uma praga.\n"
+  - "Ravi: N\xE3o sou como os outros humanos. Eu estou apenas tentando explorar os
+    mares e recuperar as pe\xE7as do meu submarino\n"
+  - "Azura: Ah, sim? Ent\xE3o por que voc\xEA tem um polvinho com voc\xEA? Ele n\xE3o
+    pode ir al\xE9m do limite do mar e n\xE3o pode ter contato com humanos."
+  - "Ravi: Eu... eu n\xE3o sabia disso. Ele so estava me ajudando."
+  - "Ravi:\nMas vou devolv\xEA-lo ao seu habitat, prometo"
+  - "Azura: \nEst\xE1 bem, Ali\xE1s, eu estou com uma de suas pe\xE7as, pode levar
+    e saia imediatamente."
+  - "Ravi: Assim t\xE3o r\xE1pido?  Oque voc\xEA ganha com isso?"
+  - "Azura:\n Ah, apenas o prazer de ver voc\xEA longe daqui. E n\xE3o metendo o
+    nariz aonde n\xE3o deve.\n"
+  - "Azura:\nAgora v\xE1, a rainha dos mares tem muitos deveres a cumprir"
+  - "Azura:\nE lembre-se: Humanos n\xE3o s\xE3o bem vindos."
