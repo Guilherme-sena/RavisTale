@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: SharkDialogue
   m_EditorClassIdentifier: 
   dialogue:
-  - "Levi:\n Meu grande Poseidon Era s\xF3 o que me faltava\u2026um tubar\xE3o!\n"
-  - "Tutu:\nQuem est\xE1 a\xED? (Olha zangado) oque?! Um humano! "
-  - "Levi:\nVoc\xEA fala?! Isso \xE9 novo\u2026 espero que n\xE3o seja r\xE1pido
+  - "Ravi: \nMeu grande Poseidon, era s\xF3 o que me faltava\u2026 Um tubar\xE3o!\n"
+  - "Tubar\xE3o Desconhecido: \nQuem est\xE1 a\xED? (Olha zangado) O que?! Um humano! "
+  - "Ravi:\nVoc\xEA fala?! Isso \xE9 novo\u2026 Espero que n\xE3o seja r\xE1pido
     o suficiente para me pegar com essas perninhas.\n"
-  - "Tutu: \nOlha quem fala! Humano pequeno insignificante eu o grande Tutu! Capit\xE3o
+  - "Tutu: \nOlha quem fala! Humano pequeno e insignificante, eu o grande Tutu! Capit\xE3o
     e chefe da maior tripula\xE7\xE3o dos 7 mares e\u2026\n"
-  - "Tutu:\nE oque voc\xEA est\xE1 fazendo aqui afinal?"
-  - "Ravi:\nEstou atr\xE1s das pe\xE7\xE3s do meu submarino que quebrou"
-  - "Tutu:\nAh, aquilo foi voc\xEA? Se n\xE3o me engano vi uma das pe\xE7as atr\xE1s
-    do castelo de areia"
+  - "Tutu:\nO que voc\xEA est\xE1 fazendo aqui afinal?"
+  - "Ravi:\nEstou atr\xE1s das pe\xE7as do meu submarino que quebrou."
+  - "Tutu:\nAh, aquilo foi voc\xEA? Se n\xE3o me engano vi um objeto estranho atr\xE1s
+    do castelo de areia, talvez seja o que voc\xEA procura."
   - "Ravi:\nS\xE9rio? Vou procurar ent\xE3o, mas onde fica isso?"
-  - "Tutu:\nAo norte do coral de rec\xEDfes, no territ\xF3rio dos peixes-palha\xE7o"
-  - "Ravi:\nOk, estou indo ent\xE3o.Obrigado."
+  - "Tutu:\nAo norte do recife de corais, no territ\xF3rio dos peixes-palha\xE7o."
+  - "Ravi:\nOk, estou indo ent\xE3o, obrigado Tutu."
