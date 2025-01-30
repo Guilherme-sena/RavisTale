@@ -49,3 +49,6 @@ TagManager:
   - name: Foreground
     uniqueID: 3387518573
     locked: 0
+  - name: Transitions
+    uniqueID: 2007495053
+    locked: 0

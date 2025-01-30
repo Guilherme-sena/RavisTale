@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal.Internal;
 
 public class StartMenu : MonoBehaviour
 {
-    public VideoPlayer videoPlayer; // Arraste o VideoPlayer pelo Inspector
+    public LevelLoader levelLoader;
+    public string sceneName;
+    public VideoPlayer videoPlayer;
+    
     private bool isLooping = true;
-    private double loopTime = 1.9; // Tempo limite para o loop (2 segundos)
-
+    private double loopTime = 1.9;
     void Start()
     {
         videoPlayer.loopPointReached += CheckVideoEnd;
@@ -17,7 +20,6 @@ public class StartMenu : MonoBehaviour
 
     void Update()
     {
-        // Verifica se deve manter o vídeo em loop até 2 segundos
         if (isLooping && videoPlayer.time >= loopTime)
         {
             videoPlayer.Stop();
@@ -25,18 +27,16 @@ public class StartMenu : MonoBehaviour
             videoPlayer.Play();
         }
     }
-
-    // Chamado pelo botão na UI
     public void StopLoop()
     {
-        isLooping = false; // Desabilita o loop, permite reprodução normal
+        isLooping = false;
     }
 
     private void CheckVideoEnd(VideoPlayer vp)
     {
         if (!isLooping)
         {
-            SceneManager.LoadScene(1); // Troca para a cena 1 ao fim do vídeo
+            levelLoader.Transition(sceneName);
         }
     }
 }
