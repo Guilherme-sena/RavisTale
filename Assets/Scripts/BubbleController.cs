@@ -28,7 +28,8 @@ public class BubbleController : MonoBehaviour
        }
        foreach (Transform child in transform){
             if(child.gameObject.GetComponent<SpriteRenderer>().enabled == false){
-                child.localScale = new Vector3(1,1,1); 
+                child.localScale = new Vector3(1,1,1);
+                child.gameObject.GetComponentInChildren<Transform>().localScale = Vector3.one;
                 child.DetachChildren();
 
             }
@@ -99,9 +100,11 @@ public class BubbleController : MonoBehaviour
     
 }
 public void POP(Transform bubble){
+    bubble.GetComponent<Collider2D>().enabled = false;
     bubble.GetComponent<SpriteRenderer>().enabled = false;
     audioSource.clip = bubblePopEffect;
     audioSource.Play();
-    Instantiate(bubble_pop,bubble.transform.position,bubble.transform.rotation);
+     GameObject Effect= Instantiate(bubble_pop,bubble.transform.position,bubble.transform.rotation);
+     Effect.transform.localScale = (bubble.localScale);
 }
 }
