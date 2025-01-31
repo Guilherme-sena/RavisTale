@@ -1,10 +1,17 @@
 using System;
 using System.Collections;
+using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class BubbleController : MonoBehaviour
 {
+    public LevelLoader levelLoader;
+    public string sceneName;
+    public TextMeshProUGUI textPartCount;
+
     public AudioClip successSFX;
     public int partCount = 0;
     private Transform lastbubble;
@@ -12,10 +19,11 @@ public class BubbleController : MonoBehaviour
     public GameObject bubble_pop;
     public AudioClip bubblePopEffect;
     public Transform gun_position;
-     public AudioSource audioSource;
+    public AudioSource audioSource;
     public  GameObject _prefab_bubble;
     [SerializeField] private float _bubbleSpeed;
-    
+
+    private float yDistance;
 
     void Start(){
         audioSource = GetComponent<AudioSource>();
@@ -23,17 +31,21 @@ public class BubbleController : MonoBehaviour
 
     }
     void Update(){
-       if(partCount == 3){
-        SceneManager.LoadScene(2);
+        textPartCount.text = partCount + "/3 Peças";
+        
+       if (partCount == 3){
+            levelLoader.Transition(sceneName);
+        //SceneManager.LoadScene(2);
        }
        foreach (Transform child in transform){
-            if(child.gameObject.GetComponent<SpriteRenderer>().enabled == false){
+            yDistance = Mathf.Abs(child.position.y - gun_position.position.y);
+            if (child.gameObject.GetComponent<SpriteRenderer>().enabled == false){
                 child.localScale = new Vector3(1,1,1);
                 child.gameObject.GetComponentInChildren<Transform>().localScale = Vector3.one;
                 child.DetachChildren();
 
             }
-            if(child.position.y > 43 && child.transform != null ){
+            if(yDistance > 16 && child.transform != null ){
                  foreach (Transform child2 in child){
                     if(child2.tag == "SubPart"){
                         audioSource.clip = successSFX;
